@@ -1,0 +1,7 @@
+{application,mochijson2,
+             [{description,[]},
+              {vsn,"0.1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {env,[]},
+              {modules,[mochijson2,mochinum]}]}.

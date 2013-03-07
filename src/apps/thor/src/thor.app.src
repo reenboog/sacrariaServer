@@ -1,0 +1,17 @@
+{application, thor,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  %lager,
+                  cowboy,
+                  kernel,
+                  stdlib,
+                  crypto
+                  %compiler,
+                  %syntax_tools
+                 ]},
+  {mod, {thor_app, []}},
+  {env, [{listening_port, 8097}]}
+ ]}.

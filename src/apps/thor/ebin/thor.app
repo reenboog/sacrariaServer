@@ -1,0 +1,9 @@
+{application,thor,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[cowboy,kernel,stdlib,crypto]},
+              {mod,{thor_app,[]}},
+              {env,[{listening_port,8097}]},
+              {modules,[default_handler,login_handler,thor_app,thor_init,
+                        thor_sup]}]}.
