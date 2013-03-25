@@ -4,4 +4,4 @@
               {registered,[]},
               {applications,[kernel,stdlib]},
               {env,[]},
-              {modules,[mochijson2,mochinum]}]}.
+              {modules,[mochijson2,mochijson2_helper,mochinum]}]}.

@@ -22,8 +22,8 @@ start(_StartType, _StartArgs) ->
     Dispatch = cowboy_router:compile([
 		%% {URIHost, list({URIPath, Handler, Opts})}
 		{'_', [
-				{"/login/[:name]", login_handler, []},
-				%{'_', login_handler, []},
+				{"/login/", login_handler, []},
+				{"/ping/", game_session_ping_handler, []},
 				{'_', default_handler, []}]
 		}
 		%{"test.localhost", [{"/update/", default_handler, []}]}

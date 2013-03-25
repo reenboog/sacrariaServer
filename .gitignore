@@ -1,3 +1,4 @@
+*.DS_Store
 *.dump
 log
 .idea/workspace.xml

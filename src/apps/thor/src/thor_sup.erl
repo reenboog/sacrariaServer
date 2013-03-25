@@ -25,10 +25,14 @@ start_link() ->
 
 init([]) ->
 	% RestartStrategy = one_for_one,
- %    MaxRestarts = 10,
- %    MaxSecondsBetweenRestarts = 3600,
+	% MaxRestarts = 10,
+	% MaxSecondsBetweenRestarts = 3600,
     
- %    SupFlags = {RestartStrategy, MaxRestarts, MaxSecondsBetweenRestarts},
+ % 	SupFlags = {RestartStrategy, MaxRestarts, MaxSecondsBetweenRestarts},
+
+ 	GameSessionPoolSpec = {game_session_pool, 
+ 							{game_session_pool, start_link, []}, 
+ 							permanent, infinity, supervisor, [game_session_pool]},
 
  %    Restart = permanent,
  %    Shutdown = 2000,
@@ -52,5 +56,5 @@ init([]) ->
     
  %    {ok, {SupFlags, [Map, MobSup, EntityHandler]}}.
 
-    {ok, { {one_for_one, 5, 10}, []} }.
+    {ok, {{one_for_one, 5, 10}, [GameSessionPoolSpec]}}.
 

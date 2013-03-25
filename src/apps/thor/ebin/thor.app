@@ -2,8 +2,9 @@
              [{description,[]},
               {vsn,"1"},
               {registered,[]},
-              {applications,[cowboy,kernel,stdlib,crypto]},
+              {applications,[cowboy,kernel,stdlib,crypto,gproc]},
               {mod,{thor_app,[]}},
               {env,[{listening_port,8097}]},
-              {modules,[default_handler,login_handler,thor_app,thor_init,
-                        thor_sup]}]}.
+              {modules,[default_handler,game_session,
+                        game_session_ping_handler,game_session_pool,
+                        login_handler,thor_app,thor_init,thor_sup]}]}.

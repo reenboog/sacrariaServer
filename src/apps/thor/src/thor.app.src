@@ -8,7 +8,8 @@
                   cowboy,
                   kernel,
                   stdlib,
-                  crypto
+                  crypto,
+                  gproc
                   %compiler,
                   %syntax_tools
                  ]},

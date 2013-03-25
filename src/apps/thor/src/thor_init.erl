@@ -8,4 +8,5 @@ start() ->
 	ok = application:start(ranch),
 	ok = application:start(cowboy),
 	%ok = application:start(lager),
+	ok = application:start(gproc),
 	ok = application:start(thor).
